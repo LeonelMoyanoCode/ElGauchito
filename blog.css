@@ -1,0 +1,405 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Definir filas para el encabezado, contenido y pie de página */
+    grid-template-columns: 100%; /* Una sola columna */
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Definir filas para el encabezado y contenido */
+    grid-template-columns: 100%;
+    background-color: #f0f0f0;
+    z-index: 1;
+}
+
+footer {
+    background-color: #333; /* Color de fondo para el pie de página */
+    color: white; /* Color de texto para el pie de página */
+    padding: 20px; /* Espaciado interior para el pie de página */
+}
+
+#header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra al encabezado */
+}
+
+/* Resto de estilos para el encabezado y contenido */
+
+  .fixed-header {
+    top: 0; /* Fija el encabezado en la parte superior */
+}
+  /* Estilos para el encabezado fijo */  
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	height: 195px;
+	margin: 1px 1px;
+	padding: 0 20px;
+	position: relative;
+	margin-top: -16px;
+}
+/* Estilos para el logo */
+.logo-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0;
+
+  }
+  
+  .logo-link {
+	display: inline-block;
+	color: #f0f0f0;
+	padding: 0px;
+	min-width: none;
+	text-decoration: none;
+  }
+  
+  .logo {
+	width: 400px;
+	height: auto;
+	border: none;
+	transition: transform 0.3s ease;
+  }
+  
+  .logo-link:hover .logo {
+	transform: translateY(2px) scale(1.05);
+  }
+/* Estilos para la segunda barra de navegación */
+.nav-list2 {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	/* Ajusta la distancia entre la segunda barra de navegación y la primera */
+	margin-bottom: 10px;
+	/* Ajusta la distancia entre la segunda barra de navegación y el contenido */
+}
+.nav-list2 li {
+	margin: 0 5px;
+
+}
+.nav-list2 li:last-child {
+	margin-right: 0;
+}
+.nav-list2 li a button {
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+	padding: 10px 20px;
+	border-radius: 50px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+	box-shadow: none;
+	z-index: 2;
+}
+.nav-list2 li a button:hover {
+	background-color: #041F1E;
+	color: white;
+	transform: translateY(0);
+}
+.button-suscribe {
+	background-color: #ff5722; /* Color de fondo */
+	color: #fff; /* Color del texto */
+	border: none;
+	padding: 20px 20px; /* Espaciado interno para el botón */
+	border-radius: 5px; /* Bordes redondeados */
+	font-weight: bold; /* Texto en negrita */
+	transition: background-color 0.3s; /* Efecto de transición en el color de fondo */
+	z-index: 1;
+	/* Opcional: sombra cuando se pasa el cursor */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: -50% 15%;
+	/* Opcional: centrar texto verticalmente y horizontalmente */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	outline: 2px solid transparent
+
+  }
+  
+  .button-suscribe:hover {
+	background-color: #ff4500; /* Cambia el color de fondo cuando se pasa el cursor */
+	text-decoration: none;
+	transition: none;
+	outline: 2px solid transparent
+  }
+
+  .gray-bar {
+	background-color: #5A7D7C;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+  }
+  
+  .gray-bar-container {
+	display: grid;
+	grid-template-rows: auto auto; /* Contenido y botones de la barra gris */
+	grid-template-columns: 1fr;
+	height: 100%;
+  }
+  
+  /* Estilos para los botones dentro de la gray-bar */
+  .gray-bar-container .nav-list2 {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	outline: none;
+  }
+.gray-bar-container .nav-list2 li {
+	margin: 0 5px;
+}
+.gray-bar-container .nav-list2 li:last-child {
+	margin-right: 0;
+}
+.gray-bar-container .nav-list2 li:first-child {
+	margin-left: 0;
+}
+.gray-bar-container .nav-list2 li a button  {
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+	padding: 10px 20px;
+	border-radius: 40px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+	box-shadow: none;
+	z-index: 2;
+}
+.gray-bar-container .nav-list2 li a button:hover {
+	background-color: #e5f4e3;
+	color: white;
+	transform: translateY(0);
+}
+.nav-list2 li a button i.bi-newspaper{
+  font-size: 20px;
+}
+.nav-list2 li a button i.bi-person{
+  font-size: 20px;
+
+}
+.nav-list2 li a button i.bi-book {
+  font-size: 20px; /* Cambia el tamaño del ícono */
+}
+.nav-list2 li a button i.bi-brightness-high {
+	font-size: 20px; /* Cambia el tamaño del ícono */
+
+}
+
+
+#custom-search-input .bi-search {
+	font-size: 20px;
+	/* Establece el tamaño del ícono de búsqueda */
+	}
+	#custom-search-input .bi-search:hover {
+	font-size: 20px;
+	/* Mismo tamaño que el ícono sin hover (sin cambios) */
+	}
+	#custom-search-input input[type="text"] {
+	height: 28px;
+	/* Establece la altura en 28px */
+	}
+	#custom-search-input .bi-search:hover {
+	transform: scale(1);
+	/* Restablece la escala a 1 (sin cambios) al pasar el cursor sobre el icono */
+	}
+	#custom-search-input{
+	padding:5px;
+	border: solid 1px #858484;
+	border-radius: 0px;
+	background-color: #fff;
+	margin-top: 5px;
+	}
+	#custom-search-input input{
+	border: 0;
+	box-shadow: none;
+	width: 200px;
+	height: 28px;
+	}
+	#custom-search-input button {
+	border: none;
+	width: 28px;
+	height: 28px;
+	/* Elimina el borde del botón */
+	background-color: transparent;
+	color: black;
+	/* Establece el fondo transparente */
+	cursor: pointer;
+	padding: 0;
+	/* Elimina el relleno del botón */
+	z-index: 2;
+    }
+	#custom-search-input button:hover{
+	border: 0;
+	box-shadow: none;
+
+	}
+	#custom-search-input .glyphicon-search{
+	font-size: 32px;
+
+	}
+	#custom-search-input .glyphicon-search:hover {
+	font-size: 32px;
+
+	/* Mismo tamaño que el icono sin hover (sin cambios) */
+  }
+  #custom-search-input input[type="text"] {
+	height: 28px;
+	/* Establece la altura en 20px */
+  }
+  #custom-search-input .glyphicon-search:hover {
+	transform: scale(1);
+	/* Restablece la escala a 1 (sin cambios) al pasar el cursor sobre el icono */
+  }
+  .carousel-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0 auto;
+	flex-direction: column;
+	position: relative;
+  }
+  
+  .carousel-inner {
+	max-width: 1269px;
+	max-height: 550px;
+	margin: 0 auto;
+	text-align: center;
+  }
+  
+.carousel-item {
+	display: flex;
+	align-items: center;
+}
+  
+.carousel-item img {
+	width: 100%;
+	height: 100%; /* Establece la altura de las imágenes en el carrusel */
+	object-fit: cover; /* Ajusta la imagen para llenar el espacio sin distorsionar */
+	position: relative;
+}
+  #carouselExampleIndicators .carousel-indicators {
+	filter: invert(508%);
+
+  }
+  #carouselExampleIndicators .carousel-indicators li {
+	border: 1px solid #000000; /* Establece un borde negro */
+	width: 30px; /* Establece el ancho del círculo */
+	height: 8px; /* Establece la altura del círculo */
+	cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  #carouselExampleIndicators .carousel-control-next {
+	right: 15%;
+	z-index: 2;
+	font-weight: bold;
+	text-align: center;
+  }
+#carouselExampleIndicators .carousel-control-next-icon::before {
+  color: #000000; /* Cambia el color del ícono a negro */
+  font-size: 20px; /* Ajusta el tamaño del ícono según tus preferencias */
+
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.514);
+    text-align: center;
+    position: absolute;
+    top: 58%;
+    margin-left: -15%;
+    right: 0; /* Alinea horizontalmente el contenido en el centro del carrusel */
+    bottom: 0; /* Extiende el fondo hasta la parte inferior del carrusel */
+    border: none;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+/* Media query para ajustar el estilo en dispositivos con un ancho máximo de 768px (tabletas y móviles) */
+@media (min-width:412px) {
+	.carousel-caption {
+	  padding: 5px; /* Reducir el espacio en dispositivos móviles */
+	  width: 100%;
+	  text-align: center;
+	  position: absolute;
+	  top: 58%;
+	  margin-left: -15%;
+	}
+  }
+  
+  @media (max-width:1200px) {
+	.carousel-caption {
+	  padding: 5px; /* Reducir el espacio en dispositivos móviles */
+	  width: 100%;
+	  text-align: center;
+	  position: absolute;
+	  top: 58%;
+	  margin-left: -15%;
+	}
+  }
+
+
+.carousel-caption h5 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.carousel-caption p {
+    font-size: 16px;
+}
+.news-grid {
+	display: flex;
+	flex-wrap: nowrap; /* Asegura que no haya salto de línea */
+	overflow-x: auto; /* Habilita la barra de desplazamiento horizontal si es necesario */
+  }
+  
+  .news-article {
+	flex: 0 0 auto; /* Hace que cada noticia ocupe el ancho disponible */
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+	max-width: calc(25% - 20px); /* Establece el ancho máximo para cada noticia */
+	box-sizing: border-box;
+	margin-right: 20px ;
+  }
+  
+  .news-article img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  .news-article h2 {
+	font-size: 18px;
+	margin: 10px 0;
+  }
+  
+  .news-article p {
+	font-size: 14px;
+	color: #555;
+  }
+  
+  
