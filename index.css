@@ -520,20 +520,17 @@ footer {
 
 .news-row2 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px;
-    margin-bottom: 60px;
-}
-
-.news-row2 :nth-child(4),
-.news-row2 :nth-child(5),
-.news-row2 :nth-child(6),
-.news-row2 :nth-child(7) {
-    grid-column: span 1;
+    margin: 0 auto; /* Centra el contenedor en la página */
+    max-width: 1400px; /* Ajusta el ancho máximo según tus necesidades */
+    margin-bottom: 40px;
 }
 
 .news-row2 .news-article {
-    max-height: 1200px;
+    max-height: 600px; /* Ajusta la altura máxima según tus necesidades */
+    overflow: hidden; /* Oculta cualquier contenido que exceda la altura máxima */
+    width: 100%; /* Ocupa el 100% del ancho de su contenedor */
 }
 
 @font-face {
