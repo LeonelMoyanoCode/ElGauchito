@@ -11,14 +11,13 @@ body {
 
 main {
   display: flex;
-  background-color: #f0f0f0;
-  width: 100%; /* Asegura que el main se extienda al 100% del ancho */
-  max-width: 768px; /* Establece el ancho máximo del main */
+  background: cover;
+  width: 90%; /* Asegura que el main se extienda al 100% del ancho */
+  max-width: 1000px; /* Establece el ancho máximo del main */
   border-radius: 10px; /* Agrega borde redondeado */
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   overflow: hidden;
-  margin: 0;
-  padding: 0;
+
 }
 
 
@@ -29,7 +28,7 @@ main {
   align-items: center;
   max-width: auto;
   height: auto;
-  margin: 0px;
+  margin: 15px;
   padding: 0px;
   position: relative;
   width: 100%;
@@ -58,6 +57,8 @@ main {
   margin: 0;
   width: 100%;
   z-index: 2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.459);
+
 }
 
 #atras-button {
@@ -73,7 +74,7 @@ main {
 }
 
 #atras-button i {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 #atras-button:hover {
@@ -92,7 +93,7 @@ main {
 	margin-right: 120px;
 }
 .logo {
-	width: 380px;
+	width: 300px;
 	border: none;
 	transition: transform 0.3s ease;
 }
@@ -190,8 +191,8 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 1800px;
-	min-height: 800px;
+	width: 600px;
+	min-height: 600px;
 }
 
 
@@ -218,8 +219,8 @@ input {
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
-	margin-bottom: 20px; /* Agrega un espacio de 20px entre los contenedores */
-   
+	margin-bottom: 10px; /* Agrega un espacio de 20px entre los contenedores */
+   margin: 15px;
 }
 
 .container.right-panel-active .sign-up-container {

@@ -7,8 +7,8 @@ window.addEventListener('scroll', () => {
         grayBar.style.position = 'fixed'; // Cambia la posición de la gray bar a 'fixed'
         grayBar.style.top = '0'; // Coloca la gray bar en la parte superior de la página
     } else {
-        logoLink.style.opacity = '1'; // Muestra el logotipo al regresar arriba
-        header.style.height = 'auto'; // Restaura la altura del header
+        logoLink.style.opacity = '1'; 
+        header.style.height = 'auto'; 
         grayBar.style.position="static";
     }
 });

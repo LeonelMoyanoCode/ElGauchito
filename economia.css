@@ -1,14 +1,23 @@
  
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	/* Definir filas para el encabezado, contenido y pie de página */
+	grid-template-columns: 100%;
+	/* Una sola columna */
+	min-height: 100vh;
+	background-color: #f0f0f0;
 }
-
 main {
-    display: flex;
-    max-height: auto;
-    max-width: auto;
-    margin: 20px;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	/* Definir filas para el encabezado y contenido */
+	grid-template-columns: 100%;
+	z-index: 1;
+    margin: 15px;
 }
 footer {
 	background-color: #333;
@@ -58,7 +67,7 @@ footer {
 
 }
 .logo {
-	margin: 0;
+	margin: 0 auto;
 	max-width: 300px;
 	border: none;
 	transition: transform 0.3s ease;
@@ -144,7 +153,6 @@ footer {
 	top: 0;
 	width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.459);
-
 }
 .gray-bar-container {
     background-color: #5A7D7C;
@@ -195,79 +203,20 @@ footer {
 	color: white;
 	transform: translateY(0);
 }
-
+.nav-list2 li a button i.bi-newspaper{
+	font-size: 25px;
+}
 .nav-list2 li a button i.bi-person{
 	font-size: 25px;
 }
-
-.nav-list2 li a button i.bi-brightness-high {
+.nav-list2 li a button i.bi-book {
 	font-size: 25px;
 	/* Cambia el tamaño del ícono */
 }
 
-.carousel-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0 auto;
-	flex-direction: column;
-	position: relative;
-}
-.carousel-inner {
-	max-width: 1400px;
-	max-height: 550px;
-	margin: 0 auto;
-	text-align: center;
-}
-.carousel-item {
-	display: flex;
-	align-items: center;
-}
-.carousel-item img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	position: relative;
-}
-#carouselExampleIndicators .carousel-indicators {
-	filter: invert(508%);
-}
-#carouselExampleIndicators .carousel-indicators li {
-	border: 1px solid #000000;
-	width: 30px;
-	height: 8px;
-	cursor: pointer;
-}
-#carouselExampleIndicators .carousel-control-next {
-	right: 15%;
-	z-index: 2;
-	font-weight: bold;
-	text-align: center;
-}
-#carouselExampleIndicators .carousel-control-next-icon::before {
-	color: #000000;
-	font-size: 20px;
-}
-.carousel-caption {
-	background-color: rgba(0, 0, 0, 0.514);
-	text-align: center;
-	position: sticky;
-	top:50%;
-	margin-left: -15%;
-	right: 0;
-	bottom: 0;
-	border: none;
-	width: 100%;
-	white-space: nowrap;
-}
 
 
 @media (max-width: 1150px) {
-	.carousel-caption h2 {
-		font-size: 22px; /* Font size for screens up to 768px width */
-		top: 2%;
-	}
 
 	.logo{
 		width: 100%;
@@ -291,58 +240,49 @@ footer {
 	}
 	.overlay{
 		display: none;
-	}
-	.other-news-container {
-		font-size: 15px; /* Usa font-size en lugar de size */
-		margin-top: 16px;
-		margin-right: 0px;
-		text-align: start;
-	}
+	}    
 
-        .noticia-container h2 {
-            font-size: 60px;
-        }
+    .other-news-container{
+        text-align: start;
+        
+    }
+    .other-news-container1{
+        text-align: start;
+    }
 
-.noticia-container h5{
-    font-size: 20px;
+
 }
-.other-news-container1{
-    text-align: start;
-    margin-right: 0px;
-}
-}
-
-
-
 @media (min-width: 1151px) {
-
 
 .barsearch{
 	display:flex;
 }
 .nav-button4{
 	display: none;
-}
-.noticia-container h2 {
-    font-size: 60px;
-}
-.other-news-container1 h6 {
-    text-align: center;
-    margin-right: 950px;
 
 }
+.other-news-container{
+    margin-right: 1010px;
+    text-align: center;
+
+}
+.other-news-container1{
+    margin-right: 970px;
+    text-align: center;
+}
+	
 }
 
 .menu-toggle {
     font-size: 20px;
     font-family: 15px;
-    margin-right: 15px;
     display: block;
     padding: 10px;
     background-color: transparent;
     color: #fff;
     border: none;
     cursor: pointer;
+    margin: 15px;
 	
 }
 
@@ -397,11 +337,14 @@ footer {
 	margin-left:0 ;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 768px) {
+
+
     .offcanvas {
         width: 100%;
         left: -100%;
     }
+
 
 }
 .btn-close {
@@ -420,11 +363,12 @@ footer {
     opacity: 1;
 }
 
+
 .overlay {
     position: fixed;
     top: 0;
     left: 20%;
-    width: 80%;
+    width: 95%;
     height: 100%;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0);
@@ -459,11 +403,15 @@ footer {
     cursor: pointer;
     padding: 10px;
 }
+
+
 .news-container {
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 }
-
+.news-article {
+    cursor: pointer;
+}
 .news-article {
     background-color: #f4f4f4;
     border-radius: 8px;
@@ -472,12 +420,12 @@ footer {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Agrega un espacio entre noticias */
+    justify-content: space-between;
 }
 
 .news-article img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -485,10 +433,9 @@ footer {
     margin: 12px;
     text-align: start;
 }
-
 .news-article h5 {
-    text-align: center;
-    font-family: 'Prime', sans-serif;
+	text-align: center;
+	font-family: 'Prime', sans-serif;
 }
 
 /* Estilo adicional para el hover */
@@ -496,84 +443,20 @@ footer {
     transform: translateY(-5px);
 }
 
-@media screen and (max-width: 1150px) {
-    .news-article {
-        width: 100%;
-    }
+
+.news-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin: 0 auto; /* Centra el contenedor en la página */
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    margin-bottom: 40px;
 }
 
-.noticia-container {
-    max-width: 1200px;
-	max-height: auto;
-    background-color: transparent;
-    text-align: center;
-    margin: auto;
-    margin-top: 0px; /* Puedes ajustar la distancia desde la parte superior según tus necesidades */
-}
-
-.noticia-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 16px;
-}
-@font-face {
-    font-family: 'Prime';
-    src: url('font/Primeform.otf') format('opentype');
-
-	font-family: 'Finish';
-    src: url('font/Finish.ttf') format('opentype');
-
-}
-.nav-button2#todoslosproductos-button {
-	font-family:'Arial' , sans-serif; 
-}
-
-.noticia-container h2 {
-    margin-bottom: 8px;
-    border-bottom: 2px solid #414141;
-    padding-bottom: 10px; /* Espacio entre el texto y la línea */
-    text-align: start;
-    white-space: pre-wrap; /* Evita que el texto se divida en varias líneas */
-    font-family:'Prime';
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.noticia-container h5 {
-    margin-bottom: 16px;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: start;
-    width: 100%;
-    margin-right: 400px;
-	border-bottom: 2px solid #414141;
-    padding-bottom: 10px; /* Espacio entre el texto y la línea */
-
-}
-.noticia-container h4 {
-    margin-bottom: 16px;
-    font-size: 30px;
-    font-family:'Prime';
-    text-align: start;
-    margin-right: 0px;
-    white-space: pre-wrap;
-    overflow: hidden;
-
-}
-
-.noticia-container h6 pre {
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: start;
-    margin-right: 0px;
-    white-space: pre-wrap; /* Utiliza pre-wrap para preservar los espacios y saltos de línea */
-    margin-bottom: 16px;
-    max-width: 100%;
-    overflow: hidden;
-	border-bottom: 2px solid #414141;
-    padding-bottom: 10px; /* Espacio entre el texto y la línea */
-	
+.news-row .news-article {
+    max-height: 1100px; /* Ajusta la altura máxima según tus necesidades */
+    overflow: hidden; /* Oculta cualquier contenido que exceda la altura máxima */
+    width: 100%; /* Ocupa el 100% del ancho de su contenedor */
 }
 .news-row2 {
     display: grid;
@@ -590,7 +473,6 @@ footer {
     width: 100%; /* Ocupa el 100% del ancho de su contenedor */
 }
 
-
 @font-face {
     font-family: 'Prime';
     src: url('font/Primeform.otf') format('opentype');
@@ -603,12 +485,25 @@ footer {
 	font-family:'Arial' , sans-serif; 
 }
 
-.other-news-container1 h6 {
+.other-news-container h6 {
 	font-family: 'Finish', sans-serif; /* Change the font family */
 	font-size: 40px; /* Change the font size */
-    margin-top: 10px;
+    margin-top: 16px;
+
+}
+.other-news-container1 h6 {
+	font-family: 'Finish', sans-serif; /* Change the font family */
+	font-size: 35px; /* Change the font size */
+    margin-top: 16px;
+
 }
 
+.carousel-caption h5 {
+    font-family: 'Prime', sans-serif; /* Use the same font family for both elements */
+    font-size: 30px; /* Change the font size as desired */
+    font-weight: bold; /* You can adjust the font weight if needed */
+    color: #ffffff; /* Change the color as needed */
+}
 
 .footer-dark footer {
     background-color: #5A7D7C; /* Cambia el color de fondo del footer a azul (#3498db) o al color que desees */
@@ -697,6 +592,3 @@ footer {
     margin-bottom: 0;
 }
 
-.news-article{
-    cursor: pointer;
-}
