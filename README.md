@@ -18,7 +18,7 @@ Descripción: Este proyecto consiste en el desarrollo de un portal de noticias r
 * Permite a los usuarios registrarse o logearse,es solo visual.
 ![Index Noticias](img/loginnoticias.jpg)
 
-#🛠️ Tecnologías Utilizadas
+# 🛠️ Tecnologías Utilizadas
 
 * HTML5: Estructura semántica de las páginas.
 * CSS3: Estilos y diseño responsivo para una experiencia óptima en diversos dispositivos.
